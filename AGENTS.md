@@ -20,3 +20,14 @@ This app requires a custom Expo development build and will not work in Expo Go. 
 ## Metadata
 
 Manage Apple App Store metadata and screenshots with `npx eas-cli@latest metadata:pull` and `npx eas-cli@latest metadata:push`.
+
+## Cursor Cloud specific instructions
+
+- **Runtime**: Bun is the package manager (`bun.lock`). Install it with `curl -fsSL https://bun.sh/install | bash` if not already present. Add `~/.bun/bin` to `PATH`.
+- **Dependencies**: `bun install` from the workspace root.
+- **Mock AI mode**: Set `EXPO_PUBLIC_MOCK_AI=1` in `.env` (or as an env var) to run the app without an `ANTHROPIC_API_KEY`. This enables mock streaming responses for UI development.
+- **Lint**: `bun run lint` (runs `expo lint`). Pre-existing warnings/errors exist in the codebase.
+- **Type check**: `bunx tsc --noEmit` passes clean.
+- **Run web**: `bun run web` starts the Expo dev server on `http://localhost:8081` (SSR mode). First bundle takes ~30s.
+- **Verify web**: Per AGENTS.md, use `npx agent-browser` for web verification. Alternatively, open `http://localhost:8081` in Chrome.
+- **No native simulators in cloud**: iOS/Android require Xcode/Android Studio which are not available in cloud VMs. Web is the testable platform here.
