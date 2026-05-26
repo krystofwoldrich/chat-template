@@ -11,7 +11,7 @@
 :root {
   
   @variant light {
-    --app-background: oklch(0.985 0 0);
+    --app-background: oklch(0.75 0.12 25);
     --app-foreground: oklch(0.12 0 0);
     --app-card: oklch(1 0 0);
     --app-user-bubble: oklch(0.95 0.003 100);
@@ -28,7 +28,7 @@
   }
 
   @variant dark {
-    --app-background: oklch(0.195 0 0);
+    --app-background: oklch(0.55 0.12 25);
     --app-foreground: oklch(0.94 0 0);
     --app-card: oklch(0.225 0 0);
     --app-user-bubble: oklch(0.14 0 0);

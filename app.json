@@ -1,13 +1,14 @@
 {
   "expo": {
     "name": "chat",
-    "slug": "chat",
+    "slug": "krystofs-test-project",
     "version": "1.0.0",
     "orientation": "portrait",
     "scheme": "chat",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
+      "bundleIdentifier": "dev.expo.chat",
       "infoPlist": {
         "UIViewControllerBasedStatusBarAppearance": true,
         "ITSAppUsesNonExemptEncryption": false
@@ -43,6 +44,13 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "d6366837-2312-4a9b-b21c-66b2b0d27316"
+      }
+    },
+    "owner": "expo"
   }
 }
